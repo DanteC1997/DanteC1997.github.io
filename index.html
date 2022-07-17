@@ -3,30 +3,46 @@
 
 <head>
 <Meta charset="UTF-8">
-<title>My Bio Site</title>
+<title>Home</title>
 
 <link rel="stylesheet" href="styles.css">
+
+<!-- This is for mobile friendly icon to use for nav-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<!--above menu>-->
+<!--Top header image / name intro>-->
+
+
+<div class="position">
 <div class="center">
-    <h1>Dante Company</h1>
+    <h1>DANTE COMPANY</h1>
+    <H3>Enjoy some of the recent work I have done and check out my studies </H3>
+</div>
 </div>
 
- <!-- Menu Nav-->   
+
 
  <header>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="Projects.html">Projects</a>
+    <a href="About.html">About</a>
+    <div class="dropdown">
+      <button class="dropbtn">Learn More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Resume.html">Resume</a>
+        <a href="Studies.html">Studies</a>
+      </div>
+    </div> 
 
-<div class="navbar"> 
-     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="Studies.html">Studies</a></li>
-        <li><a href="Resume.html">Resume</a></li>
-        <li><a href="About.html">About Me</a></li>
-    </ul>
-</div>  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
 
 </header>
    
@@ -51,6 +67,7 @@
 </div>
 </div>
 
+
 <!--Short text after self image-->
 
 <div class ="center">
@@ -60,77 +77,28 @@
 <!--Wide image -->
 
 <img src="Images/resume.jpg" alt="resume header" width = "100%" height="auto">
-  
-     
-<!-- Body get to know me-->
 
-<div class="center">
-    <h1>Get to Know me Briefly</h1>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Phasellus imperdiet, nulla et dictum interdum, nisi lorem
-          egestas vitae scel<span id="dots">...</span><span id="more">erisque enim 
-              ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, 
-              auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc 
-              sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at 
-              libero sed nunc venenatis imperdiet sed ornare turpis. Donec 
-              vitae dui eget tellus gravida venenatis. Integer fringilla 
-              congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-               porta.</span></p>
-<button onclick="myFunction()" id="myBtn">Read more</button>
-</div>  
-
-<div class ="center">
-<p>Project 1</p>
-<p>Project 2</p>
-<p>Project 3</p>
-<p>Project 4</p>
-</div>
-
-<!--Footer>-->
-
-
-
-
-<!--wide image-->
-
-  
-<!--Script-->
+    
+<!--Script for below-->
 
 <script>
-    function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
-    
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more"; 
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less"; 
-        moreText.style.display = "inline";
-      }
-    }
-    </script>
 
 
 
-    <!--Grid section for projects-->
-<div class="center">
-    <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-    </div>
+  /* mobile freidnly  */
 
-    <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-    </div>
-</div>
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
-<!--This section is for the footer only-->
+  </script>
+
+  <!--Header section only-->
 
 <div class ="footer">
     <h1>This is the footer</h1>
@@ -139,8 +107,4 @@
 </div>
 
 </body>
-
-
-
-
 </html>

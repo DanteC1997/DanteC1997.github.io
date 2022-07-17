@@ -3,9 +3,16 @@
 
 <head>
 <Meta charset="UTF-8">
-<title>My Bio Site</title>
+<title>Projects</title>
 
 <link rel="stylesheet" href="styles.css">
+
+<!--Menu resposive-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 
 <body>
@@ -14,20 +21,54 @@
     <h1>Dante Company</h1>
 </div>
 
- <!-- Menu Nav-->   
-<div class="navbar"> 
-     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="Studies.html">Studies</a></li>
-        <li><a href="Resume.html">Resume</a></li>
-        <li><a href="About.html">About Me</a></li>
-    </ul>
-</div>   
+<!--Sticky Menu / mobile friendly menu-->
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="Projects.html">Projects</a>
+  <a href="About.html">About</a>
+  <div class="dropdown">
+    <button class="dropbtn">Learn More
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Resume.html">Resume</a>
+      <a href="Studies.html">Studies</a>
+    </div>
+  </div> 
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
 
 
 <div class="center">
     <h1>Projects</h1>
+</div>
+
+<script>
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+
+
+
+
+
+<!--This section is for the footer only-->
+
+<div class ="footer">
+    <h1>This is the footer</h1>
+    <p>Soical Icons go here</p>
+    <p>Made By Dante Company @2022</p>
 </div>
 
 </body>
